@@ -5,6 +5,6 @@ RSpec.describe PowerAbilities, type: :model do
     it { should validate_presence_of :power }
     it { should validate_presence_of :color }
     it { should validate_presence_of :ability }
-    it { should validate_presence_of :desciption }
+    it { should validate_presence_of :description }
   end
 end
