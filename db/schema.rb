@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_020602) do
+ActiveRecord::Schema.define(version: 2020_08_04_032236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "improved_abilities", force: :cascade do |t|
+    t.string "symbol"
+    t.text "movement"
+    t.text "targeting"
+  end
 
   create_table "keyphrase_abilities", force: :cascade do |t|
     t.string "keyphrase"
