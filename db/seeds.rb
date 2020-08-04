@@ -1,4 +1,5 @@
 # Colors
+
 red = '#CC0000'
 orange = '#FF6600'
 yellow = '#FFFF00'
@@ -12,22 +13,22 @@ black = '#000000'
 gray = '#9E9E9E'
 
 # Speed Abilities
+
 PowerAbilities.create(power: 'speed', color: red, ability: 'Flurry', description: 'CLOSE: Make up to two close attacks.')
 PowerAbilities.create(power: 'speed', color: orange, ability: 'Leap/Climb', description: "Elevation does not affect adjacency when choosing targets for a close attack. MOVE: (MOVEMENT, RED, GREEN, BROWN WITH CIRCLE, INFINITI ARROW), BREAKAWAY +2. Move (up to your speed value).")
 PowerAbilities.create(power: 'speed', color: yellow, ability: 'Phasing/Teleport', description: 'MOVE: (MOVMENT, RED, GREEN, BROWN, BLACK COG). Move (up to your speed value).')
-PowerAbilities.create(power: 'speed', color: light_green, ability: 'Earthbound/Neutralized', description: 'This character can’t use (MOVEMENT) or (TARGETING) abilities or
-Willpower.')
+PowerAbilities.create(power: 'speed', color: light_green, ability: 'Earthbound/Neutralized', description: 'This character can’t use (MOVEMENT) or (TARGETING) abilities or Willpower.')
 PowerAbilities.create(power: 'speed', color: green, ability: 'Charge', description: 'Can’t be knocked back. POWER: Halve speed. Move, then CLOSE: at no cost.')
 PowerAbilities.create(power: 'speed', color: sky_blue, ability: 'Mind Control', description: 'CLOSE/RANGE: Minimum range value 4. Make a close/range attack. Instead of normal damage, a hit character halves speed and becomes friendly to your force and may in either order: Move and/or make an attack. Then it reverts forces.')
 PowerAbilities.create(power: 'speed', color: blue, ability: 'Plasticity', description: 'BREAKAWAY +2. Adjacent opposing characters get BREAKAWAY -2. Adjacent opposing characters of the same size or smaller can’t use (MOVEMENT, INFINITI ARROW) or automatically break away.')
 PowerAbilities.create(power: 'speed', color: purple, ability: 'Force Blast', description: 'KNOCKBACK. POWER: Roll a d6. A target adjacent opposing character is knocked back equal to the result.')
 PowerAbilities.create(power: 'speed', color: pink, ability: 'Sidestep', description: 'FREE: Move up to 2 squares.')
-PowerAbilities.create(power: 'speed', color: brown, ability: 'Hypersonic Speed', description: 'BREAKAWAY +2. POWER: Halve range, (MOVEMENT, INFINITI ARROW), (CARRY):0. Move, then
-make an attack, then move up to ‘your speed value minus the number of squares just moved’.')
+PowerAbilities.create(power: 'speed', color: brown, ability: 'Hypersonic Speed', description: 'BREAKAWAY +2. POWER: Halve range, (MOVEMENT, INFINITI ARROW), (CARRY):0. Move, then make an attack, then move up to ‘your speed value minus the number of squares just moved’.')
 PowerAbilities.create(power: 'speed', color: black, ability: 'Stealth', description: 'When it’s not your turn, hindered lines of fire drawn to this character are blocked.')
 PowerAbilities.create(power: 'speed', color: gray, ability: 'Running Shot', description: 'POWER: Halve speed. Move, then RANGE: at no cost.')
 
-Attack Abilities
+# Attack Abilities
+
 PowerAbilities.create(power: 'attack' , color: red, ability: 'Blades/Claws/Fangs', description: 'When this character hits and would deal normal damage during a CLOSE action, you may roll a d6. If you do, deal damage equal to the result instead of normal damage. Minimum result is this character’s printed damage value -1.')
 PowerAbilities.create(power: 'attack' , color: orange, ability: 'Energy Explosion', description: 'RANGE: Make a range attack, and all other characters adjacent to an original target also become targets. Hit characters are dealt 2 damage instead of normal damage.')
 PowerAbilities.create(power: 'attack' , color: yellow, ability: 'Pulse Wave', description: 'RANGE: Halve range, (TARGETING, BLACK COG, INFINITI ARROW). Other characters within range can’t use powers or abilities (for this action). Make a range attack targeting all other characters, at least one of which must be opposing, within range and line of fire using their printed defense values. If more than one character is targeted, each hit character is dealt 1 damage instead of normal damage.')
@@ -42,6 +43,7 @@ PowerAbilities.create(power: 'attack' , color: black, ability: 'Steal Energy', d
 PowerAbilities.create(power: 'attack' , color: gray, ability: 'TELEKINESIS', description: 'POWER: Minimum range value 6, (TARGETING, INFINITI ARROW). Pick up an object (light or heavy) within range and line of fire, then give a RANGE Object Action at no cost or place it in a square within range and line of fire. // POWER: Minimum range value 6. Place one target single-base character within range and line of fire into another square within range and line of fire. That square must be within 6 squares and line of fire from the target’s current square. If the target is an opposing character, first make a range attack and the hit character is then placed instead of normal damage. Characters placed by this power can’t use Telekinesis this turn.')
 
 # Defense Abilities
+
 PowerAbilities.create(power: 'defense' , color: red, ability: 'Super Senses', description: 'When this character would be hit, you may roll a d6. ⚄ - ⚅: Evade.')
 PowerAbilities.create(power: 'defense' , color: orange, ability: 'Toughness', description: 'Reduce damage taken by 1.')
 PowerAbilities.create(power: 'defense' , color: yellow, ability: 'Defend', description: 'Adjacent friendly characters may replace their defense value with this character’s printed defense value.')
@@ -56,6 +58,7 @@ PowerAbilities.create(power: 'defense' , color: black, ability: 'Regeneration', 
 PowerAbilities.create(power: 'defense' , color: gray, ability: 'Invunerability', description: 'Reduce damage taken by 2.')
 
 # Damage Abilities
+
 PowerAbilities.create(power: 'damage' , color: red, ability: 'Range Combat Expert', description: 'Choose one: Modify attack +2, damage +2, or both +1. Make a range attack targeting a single character.')
 PowerAbilities.create(power: 'damage' , color: orange, ability: 'Battle Fury', description: 'This character can’t make range attacks or be given RANGE actions, can’t be carried, and has PROTECTED: Incapacitate, Mind Control. When this character attacks, opposing characters can’t use Shape Change.')
 PowerAbilities.create(power: 'damage' , color: yellow, ability: 'Support', description: 'Choose a target adjacent friendly character. If this character and the target aren’t adjacent to any opposing characters, roll 2d6. Add the result to this character’s attack value, and if that is equal to or higher than the target’s defense value, roll a d6. The target is healed of that result - 2, minimum 2. (This is not an attack.)')
