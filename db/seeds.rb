@@ -8,6 +8,7 @@ green = '#339900'
 sky_blue = '#81D4FA'
 blue = '#3366FF'
 purple = '#660099'
+pink = '#efbbff'
 brown = '#996633'
 black = '#000000'
 gray = '#9E9E9E'
@@ -32,7 +33,7 @@ PowerAbilities.create(power: 'speed', color: gray, ability: 'Running Shot', desc
 PowerAbilities.create(power: 'attack' , color: red, ability: 'Blades/Claws/Fangs', description: 'When this character hits and would deal normal damage during a CLOSE action, you may roll a d6. If you do, deal damage equal to the result instead of normal damage. Minimum result is this character’s printed damage value -1.')
 PowerAbilities.create(power: 'attack' , color: orange, ability: 'Energy Explosion', description: 'RANGE: Make a range attack, and all other characters adjacent to an original target also become targets. Hit characters are dealt 2 damage instead of normal damage.')
 PowerAbilities.create(power: 'attack' , color: yellow, ability: 'Pulse Wave', description: 'RANGE: Halve range, (TARGETING, BLACK COG, INFINITI ARROW). Other characters within range can’t use powers or abilities (for this action). Make a range attack targeting all other characters, at least one of which must be opposing, within range and line of fire using their printed defense values. If more than one character is targeted, each hit character is dealt 1 damage instead of normal damage.')
-PowerAbilities.create(power: 'attack' , color: light_green, ability: 'quake', description: 'KNOCKBACK. Make a close attack targeting all adjacent opposing characters. If more than one character is targeted, each hit character is dealt 2 damage instead of normal damage.')
+PowerAbilities.create(power: 'attack' , color: light_green, ability: 'Quake', description: 'KNOCKBACK. Make a close attack targeting all adjacent opposing characters. If more than one character is targeted, each hit character is dealt 2 damage instead of normal damage.')
 PowerAbilities.create(power: 'attack' , color: green, ability: 'Super Strength', description: 'KNOCKBACK during close attacks. This character can pick up (and hold) heavy objects.')
 PowerAbilities.create(power: 'attack' , color: sky_blue, ability: 'Incapacitate', description: 'CLOSE/RANGE: Make a close/range attack. Hit targets are given an action token instead of normal damage. After resolutions if a hit target already had 2 action tokens, deal them 1 penetrating damage.')
 PowerAbilities.create(power: 'attack' , color: blue, ability: 'Penetrating/Psychic Blast', description: 'RANGE: Make a range attack. Damage dealt by this attack is penetrating.')
@@ -110,3 +111,38 @@ ImprovedAbilities.create(symbol: 'improved_abilities_symbol_brown_with_circle', 
 ImprovedAbilities.create(symbol: 'improved_abilities_symbol_brown_with_damage', movement: 'This character can move through Blocking terrain. Immediately after movement resolves, destroy all Blocking terrain moved through.', targeting: 'Once per range attack, this character can draw a line of fire through one piece of Blocking terrain. Immediately after the attack resolves, destroy that piece of Blocking terrain.')
 ImprovedAbilities.create(symbol: 'improved_abilities_symbol_black_cog', movement: 'This character can move through squares adjacent to or occupied by opposing characters without stopping, and automatically breaks away, even if adjacent to a character that can use Plasticity.', targeting: 'Lines of fire drawn by this character are not blocked by characters.')
 ImprovedAbilities.create(symbol: 'improved_abilities_symbol_infinite_arrow', movement: 'This character can move through squares adjacent to or occupied by opposing characters without stopping. (Still needs to break away.)', targeting: 'This character can make range attacks while adjacent to opposing characters. (May target adjacent or non-adjacent opposing characters.)')
+
+# Team Affiliations
+
+TeamAffiliations.create(symbol: "batman_ally_team_affiliation_symbol", team_name: "BATMAN ALLY", description: "Stealth.")
+TeamAffiliations.create(symbol: "batman_enemy_team_affiliation_symbol", team_name: "BATMAN ENEMY", description: "When this character makes an attack, you may replace its attack value with the printed attack value of an adjacent friendly character that can use this team ability.")
+TeamAffiliations.create(symbol: "green_lantern_corps_team_affiliation_symbol", team_name: "GREEN LANTERN CORPS", description: "(Passenger):8.")
+TeamAffiliations.create(symbol: "hypertime_team_affiliation_symbol", team_name: "HYPERTIME", description: "When an opposing character that can't use this team ability attempts to move from a non-adjacent square into a square that is adjacent to this character, it must roll a d6. [⚀ - ⚁]: The opposing character can't move into any square adjacent to this character this turn. Uncopyable.")
+TeamAffiliations.create(symbol: "injustice_league_team_affiliation_symbol", team_name: "INJUSTICE LEAGUE", description: "When this character hits an opposing character with an attack roll of [10-12], after resolutions remove an action token from this character.")
+TeamAffiliations.create(symbol: "justice_league_team_affiliation_symbol", team_name: "JUSTICE LEAGUE", description: "When this character is given a MOVE action, modify speed +1.")
+TeamAffiliations.create(symbol: "justice_society_team_affiliation_symbol", team_name: "JUSTICE SOCIETY", description: "When this character is attacked, you may replace its defense value with the printed defense value of an adjacent friendly character that can use this team ability.")
+TeamAffiliations.create(symbol: "kingdom_come_team_affiliation_symbol", team_name: "KINGDOM COME", description: "When this character would be hit by a range attack, if the attacker doesn’t have [Kingdom Come Team Ability Symbol], you may roll a d6. [⚄ - ⚅]: Evade. Uncopyable.")
+TeamAffiliations.create(symbol: "legion_of_super_heroes_team_affiliation_symbol", team_name: "LEGION OF SUPER HEROES", description: "Wild Card. Uncopyable.")
+TeamAffiliations.create(symbol: "outsiders_team_affiliation_symbol", team_name: "OUTSIDERS", description: "FREE: Choose a character (including itself) within 6 squares and line of fire. Until your next turn, the chosen character’s combat values can’t be modified. Uncopyable.")
+TeamAffiliations.create(symbol: "quintessence_team_affiliation_symbol", team_name: "QUINTESSENCE", description: "Willpower. This character has PROTECTED: Outwit. Uncopyable.")
+TeamAffiliations.create(symbol: "suicide_squad_team_affiliation_symbol", team_name: "SUICIDE SQUAD", description: "When an adjacent friendly character is KO’d, after resolutions, you may roll a d6. If you do, heal this character equal to the result -2, minimum 1.")
+TeamAffiliations.create(symbol: "superman_ally_team_affiliation_symbol", team_name: "SUPERMAN ALLY", description: "(MOVEMENT, GREEN), (TARGETING, GREEN)")
+TeamAffiliations.create(symbol: "superman_enemy_team_affiliation_symbol", team_name: "SUPERMAN ENEMY", description: "FREE: If this character is adjacent to a friendly character of lower points that can use this team ability, it can use Outwit until your next turn.")
+TeamAffiliations.create(symbol: "titans_team_affiliation_symbol", team_name: "TITANS", description: "POWER: Choose an adjacent friendly character that can use this team ability and heal that character 1 click and roll a d6. [⚄ - ⚅]: This character is dealt 1 unavoidable damage.")
+TeamAffiliations.create(symbol: "avengers_team_affiliation_symbol", team_name: "AVENGERS", description: "When this character is given a MOVE action, modify speed +1.")
+TeamAffiliations.create(symbol: "avengers_initiative_team_affiliation_symbol", team_name: "AVENGERS INITIATIVE", description: "(MOVEMENT, GREEN), (TARGETING, GREEN).")
+TeamAffiliations.create(symbol: "brotherhood_of_mutants_team_affiliation_symbol", team_name: "BROTHERHOOD OF MUTANTS", description: "When this character hits an opposing character with an attack roll of [10-12], after resolutions remove an action token from this character.")
+TeamAffiliations.create(symbol: "defenders_team_affiliation_symbol", team_name: "DEFENDERS", description: "When this character is attacked, you may replace its defense value with the printed defense value of an adjacent friendly character that can use this team ability.")
+TeamAffiliations.create(symbol: "hydra_team_affiliation_symbol", team_name: "HYDRA", description: "When an adjacent friendly character makes a range attack, modify the target’s defense -1 if the target is within line of fire of this character.")
+TeamAffiliations.create(symbol: "masters_of_evil_team_affiliation_symbol", team_name: "MASTERS OF EVIL", description: "Colossal Stamina")
+TeamAffiliations.create(symbol: "power_cosmic_team_affiliation_symbol", team_name: "POWER COSMIC", description: "Willpower. This character has PROTECTED: Outwit. Uncopyable.")
+TeamAffiliations.create(symbol: "sinister_syndicate_team_affiliation_symbol", team_name: "SINISTER SYNDICATE", description: "When this character makes an attack, you may replace its attack value with the printed attack value of an adjacent friendly character that can use this team ability.")
+TeamAffiliations.create(symbol: "skrulls_team_affiliation_symbol", team_name: "SKRULLS", description: "Shape Change, but only succeeds on a ⚅.")
+TeamAffiliations.create(symbol: "spiderman_team_affiliation_symbol", team_name: "SPIDER-MAN", description: "Wild Card. Uncopyable.")
+TeamAffiliations.create(symbol: "shield_team_affiliation_symbol", team_name: "S.H.I.E.L.D.", description: "Adjacent friendly characters modify range +1. POWER: Choose an adjacent friendly character. Once this turn, the chosen character modifies its damage +1 when making a range attack.")
+TeamAffiliations.create(symbol: "xmen_team_affiliation_symbol", team_name: "X-MEN", description: "POWER: Choose an adjacent friendly character that can use this team ability and heal that character 1 click and roll a d6. [⚀ - ⚃]: This character is dealt 1 unavoidable damage.")
+TeamAffiliations.create(symbol: "mystics_team_affiliation_symbol", team_name: "MYSTICS", description: "Each time this character takes damage from an opposing character's attack, after resolutions deal the attacker 1 penetrating damage. Uncopyable.")
+TeamAffiliations.create(symbol: "police_team_affiliation_symbol", team_name: "POLICE", description: "When an adjacent friendly character makes a range attack, modify the target’s defense -1 if the target is within line of fire of this character.")
+TeamAffiliations.create(symbol: "snowfall_team_affiliation_symbol", team_name: "SNOWFALL", description: "Wild Card. Uncopyable.")
+TeamAffiliations.create(symbol: "team_player_team_affiliation_symbol", team_name: "TEAM PLAYER", description: "Wild Card. Uncopyable.")
+TeamAffiliations.create(symbol: "underworld_team_affiliation_symbol", team_name: "UNDERWORLD", description: "(Passenger):1, but only to carry a character that shares a keyword. (Passenger):2, but only to carry characters that share a keyword (with this character) and are lower points.")
