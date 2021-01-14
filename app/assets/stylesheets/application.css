@@ -104,3 +104,20 @@
 .bottom-window {
   border-bottom: 1.5px dashed #4EBCFF;
 }
+
+/* Doors */
+.right-door {
+  border-right: 1.5px dashed black;
+}
+
+.left-door {
+  border-left: 1.5px dashed black;
+}
+
+.top-door {
+  border-top: 1.5px dashed black;
+}
+
+.bottom-door {
+  border-bottom: 1.5px dashed black;
+}
