@@ -9,7 +9,7 @@
 }
 
 #container {
-  border: 5px solid black;
+  border: 5px outset black;
   margin: 2rem;
   max-height: 840px;
   max-width: 840px;
@@ -21,17 +21,24 @@
 }
 
 .grid-item {
-  max-height: 0;
-  max-width: 0;
-  padding: 1em;
-  border: 1.5px solid #ddd;
+  position: relative;
+  height: 2em;
+  width: 2em;
+  border: 1.5px outset #ddd;
   text-align: center;
+  color: white;
+}
+
+.grid-item, .transition-bottom {
+  font-size: 16px;
+  bottom: 0px;
+  z-index: 2;
 }
 
 /* Starting Area */
 .start-area {
   background-color: #E7AEFB;
-  opacity: .7
+  opacity: .7;
 }
 
 .start-area:hover {
@@ -56,36 +63,36 @@
 
 /* Walls */
 .right-wall {
-  border-right: 1.5px solid black;
+  border-right: 1.5px outset black;
 }
 
 .left-wall {
-  border-left: 1.5px solid black;
+  border-left: 1.5px outset black;
 }
 
 .top-wall {
-  border-top: 1.5px solid black;
+  border-top: 1.5px outset black;
 }
 
 .bottom-wall {
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.5px outset black;
 }
 
 /* Indoor Walls */
 .indoor-right-wall {
-  border-right: 1.5px solid yellow;
+  border-right: 1.5px inset yellow;
 }
 
 .indoor-left-wall {
-  border-left: 1.5px solid yellow;
+  border-left: 1.5px outset yellow;
 }
 
 .indoor-top-wall {
-  border-top: 1.5px solid yellow;
+  border-top: 1.5px outset yellow;
 }
 
 .indoor-bottom-wall {
-  border-bottom: 1.5px solid yellow;
+  border-bottom: 1.5px inset yellow;
 }
 
 /* Windows */
@@ -120,4 +127,74 @@
 
 .bottom-door {
   border-bottom: 1.5px dashed black;
+}
+
+/* Elevation Terrain */
+.elevation-terrain {
+  background-color: #FFB2B2;
+}
+
+.right-et {
+  border-right: 1.5px solid red;
+}
+
+.left-et {
+  border-left: 1.5px solid red;
+}
+
+.top-et {
+  border-top: 1.5px solid red;
+}
+
+.bottom-et {
+  border-bottom: 1.5px solid red;
+}
+
+.right-et-transition {
+  border-right: 1.5px outset red;
+}
+
+.left-et-transition {
+  border-left: 1.5px outset red;
+}
+
+.top-et-transition {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px outset transparent;
+  border-right: 16px outset transparent;
+  border-top: 16px outset red;
+  top: 0px;
+}
+
+.bottom-et-transition {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px outset transparent;
+  border-right: 16px outset transparent;
+  border-bottom: 16px outset red;
+  bottom: 0px;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 32px outset transparent;
+  border-bottom: 32px outset transparent;
+  border-left: 32px outset green;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 32px outset transparent;
+  border-bottom: 32px outset transparent;
+  border-right: 32px outset blue;
 }
