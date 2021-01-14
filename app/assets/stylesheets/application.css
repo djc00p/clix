@@ -87,3 +87,20 @@
 .indoor-bottom-wall {
   border-bottom: 1.5px solid yellow;
 }
+
+/* Windows */
+.right-window {
+  border-right: 1.5px dashed #4EBCFF;
+}
+
+.left-window {
+  border-left: 1.5px dashed #4EBCFF;
+}
+
+.top-window {
+  border-top: 1.5px dashed #4EBCFF;
+}
+
+.bottom-window {
+  border-bottom: 1.5px dashed #4EBCFF;
+}
