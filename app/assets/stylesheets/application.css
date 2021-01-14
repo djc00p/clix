@@ -70,3 +70,20 @@
 .bottom-wall {
   border-bottom: 1.5px solid black;
 }
+
+/* Indoor Walls */
+.indoor-right-wall {
+  border-right: 1.5px solid yellow;
+}
+
+.indoor-left-wall {
+  border-left: 1.5px solid yellow;
+}
+
+.indoor-top-wall {
+  border-top: 1.5px solid yellow;
+}
+
+.indoor-bottom-wall {
+  border-bottom: 1.5px solid yellow;
+}
