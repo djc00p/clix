@@ -27,3 +27,15 @@
   border: 1px solid #ddd;
   text-align: center;
 }
+
+.start-area {
+  background-color: #E7AEFB;
+  opacity: .7
+}
+
+.start-area:hover {
+  opacity: none;
+  outline-color: #5C0979;
+  outline-style: auto;
+  outline-width: thin;
+}
