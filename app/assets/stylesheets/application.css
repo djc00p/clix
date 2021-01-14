@@ -39,3 +39,7 @@
   outline-style: auto;
   outline-width: thin;
 }
+
+.water-terrain {
+  background-color: #2EADFF;
+}
