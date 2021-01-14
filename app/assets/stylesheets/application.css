@@ -11,9 +11,9 @@
 #container {
   border: 5px solid black;
   margin: 2rem;
-  max-height: 816px;
-  max-width: 816px;
-  min-width: 816px;
+  max-height: 840px;
+  max-width: 840px;
+  min-width: 840px;
   padding: 1.5rem;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -24,10 +24,11 @@
   max-height: 0;
   max-width: 0;
   padding: 1em;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
   text-align: center;
 }
 
+/* Starting Area */
 .start-area {
   background-color: #E7AEFB;
   opacity: .7
@@ -40,6 +41,7 @@
   outline-width: thin;
 }
 
+/* Terrain */
 .water-terrain {
   background-color: #2EADFF;
 }
@@ -50,4 +52,21 @@
 
 .blocking-terrain {
   background-color: #935500;
+}
+
+/* Walls */
+.right-wall {
+  border-right: 1.5px solid black;
+}
+
+.left-wall {
+  border-left: 1.5px solid black;
+}
+
+.top-wall {
+  border-top: 1.5px solid black;
+}
+
+.bottom-wall {
+  border-bottom: 1.5px solid black;
 }
