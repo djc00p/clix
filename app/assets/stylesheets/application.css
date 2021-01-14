@@ -47,3 +47,7 @@
 .hindering-terrain {
   background-color: #0DAA06;
 }
+
+.blocking-terrain {
+  background-color: #935500;
+}
