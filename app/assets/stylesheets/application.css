@@ -82,6 +82,14 @@
   background-color: #0DAA06;
 }
 
+.obscuring-terrain {
+  background-color: #BEBEBE;
+}
+
+.special-terrain {
+  background-color: #FFB600;
+}
+
 .water-terrain {
   background-color: #2EADFF;
 }
