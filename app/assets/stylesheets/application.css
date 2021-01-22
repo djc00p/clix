@@ -25,6 +25,7 @@
 
 /* Map Border Edge */
 .map-edge-bottom {
+  color: black;
   border-top: 1px solid white;
   border-right: 1px solid white;
   border-left: 1px solid white;
@@ -43,6 +44,8 @@
 }
 
 .map-edge-right {
+  color: black;
+  text-align: center;
   border-top: 1px solid white;
   border-right: 4px outset black;
   border-left: 1px solid white;
@@ -54,6 +57,18 @@
   border-right: 1px solid white;
   border-left: 1px solid white;
   border-bottom: 1px solid white;
+}
+
+.map-edge-bottom span {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.map-edge-right span {
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
 }
 
 /* Starting Area */
@@ -224,7 +239,6 @@
 
 .et-num-bottom {
   font-size: 10px;
-  bottom: 0;
 }
 
 .et-num-bottom span {
@@ -236,7 +250,6 @@
 
 .et-num-left {
   font-size: 10px;
-  bottom: 0;
 }
 
 .et-num-left span {
@@ -248,7 +261,6 @@
 
 .et-num-right {
   font-size: 10px;
-  bottom: 0;
 }
 
 .et-num-right span {
@@ -260,7 +272,6 @@
 
 .et-num-top {
   font-size: 10px;
-  top: 0;
 }
 
 .et-num-top span {
