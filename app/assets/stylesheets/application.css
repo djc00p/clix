@@ -3,17 +3,12 @@
   --grid-rows: 1;
 }
 
-.board {
-  display: ;
-  content: ;
-}
-
 #container {
   border: 5px outset black;
   margin: 2rem;
-  max-height: 840px;
-  max-width: 840px;
-  min-width: 840px;
+  max-height: 815px;
+  max-width: 815px;
+  min-width: 815px;
   padding: 1.5rem;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -24,15 +19,9 @@
   position: relative;
   height: 2em;
   width: 2em;
-  border: 1.5px outset #ddd;
+  border: 1px outset #EAEAEA;
   text-align: center;
   color: white;
-}
-
-.grid-item, .transition-bottom {
-  font-size: 16px;
-  bottom: 0px;
-  z-index: 2;
 }
 
 /* Starting Area */
@@ -63,70 +52,70 @@
 
 /* Walls */
 .right-wall {
-  border-right: 1.5px outset black;
+  border-right: 1px inset black;
 }
 
 .left-wall {
-  border-left: 1.5px outset black;
+  border-left: 1px outset black;
 }
 
 .top-wall {
-  border-top: 1.5px outset black;
+  border-top: 1px outset black;
 }
 
 .bottom-wall {
-  border-bottom: 1.5px outset black;
+  border-bottom: 1px inset black;
 }
 
 /* Indoor Walls */
 .indoor-right-wall {
-  border-right: 1.5px inset yellow;
+  border-right: 1px inset yellow;
 }
 
 .indoor-left-wall {
-  border-left: 1.5px outset yellow;
+  border-left: 1px outset yellow;
 }
 
 .indoor-top-wall {
-  border-top: 1.5px outset yellow;
+  border-top: 1px outset yellow;
 }
 
 .indoor-bottom-wall {
-  border-bottom: 1.5px inset yellow;
+  border-bottom: 1px inset yellow;
 }
 
 /* Windows */
 .right-window {
-  border-right: 1.5px dashed #4EBCFF;
+  border-right: 1px dashed #4EBCFF;
 }
 
 .left-window {
-  border-left: 1.5px dashed #4EBCFF;
+  border-left: 1px dashed #4EBCFF;
 }
 
 .top-window {
-  border-top: 1.5px dashed #4EBCFF;
+  border-top: 1px dashed #4EBCFF;
 }
 
 .bottom-window {
-  border-bottom: 1.5px dashed #4EBCFF;
+  border-bottom: 1px dashed #4EBCFF;
 }
 
 /* Doors */
 .right-door {
-  border-right: 1.5px dashed black;
+  border-right: 1px dashed black;
 }
 
 .left-door {
-  border-left: 1.5px dashed black;
+  border-left: 1px dashed black;
 }
 
 .top-door {
-  border-top: 1.5px dashed black;
+  border-top: 1px dashed black;
 }
 
 .bottom-door {
-  border-bottom: 1.5px dashed black;
+  border-bottom: 1px dashed black;
 }
 
 /* Elevation Terrain */
@@ -134,67 +123,109 @@
   background-color: #FFB2B2;
 }
 
-.right-et {
-  border-right: 1.5px solid red;
+.right-et-edge {
+  border-right: 1px outset red;
 }
 
-.left-et {
-  border-left: 1.5px solid red;
+.left-et-edge {
+  border-left: 1px inset red;
 }
 
-.top-et {
-  border-top: 1.5px solid red;
+.top-et-edge {
+  border-top: 1px inset red;
 }
 
-.bottom-et {
-  border-bottom: 1.5px solid red;
+.bottom-et-edge {
+  border-bottom: 1px outset red;
 }
 
-.right-et-transition {
-  border-right: 1.5px outset red;
+.bottom-et-transition {
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px inset transparent;
+  border-right: 16px inset transparent;
+  border-bottom: 16px inset red;
+  bottom: 0px;
 }
 
 .left-et-transition {
-  border-left: 1.5px outset red;
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 16px outset transparent;
+  border-bottom: 16px outset transparent;
+  border-left: 16px outset red;
+  left: 0px;
+}
+
+.right-et-transition {
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 16px inset transparent;
+  border-bottom: 16px inset transparent;
+  border-right: 16px inset red;
+  right: 0px;
 }
 
 .top-et-transition {
+  text-align: center;
   color: white;
-  font-size: 10px;
-  position: absolute;
   width: 0;
   height: 0;
   border-left: 16px outset transparent;
   border-right: 16px outset transparent;
   border-top: 16px outset red;
-  top: 0px;
 }
 
-.bottom-et-transition {
-  text-align: center;
-  color: white;
+.et-num-bottom {
   font-size: 10px;
+  bottom: 0;
+}
+
+.et-num-bottom span {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 16px outset transparent;
-  border-right: 16px outset transparent;
-  border-bottom: 16px outset red;
-  bottom: 0px;
+  bottom: 0;
+  left: 13.5px;
+  z-index: 1;
 }
 
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 32px outset transparent;
-  border-bottom: 32px outset transparent;
-  border-left: 32px outset green;
+.et-num-left {
+  font-size: 10px;
+  bottom: 0;
 }
 
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 32px outset transparent;
-  border-bottom: 32px outset transparent;
-  border-right: 32px outset blue;
+.et-num-left span {
+  position: absolute;
+  left: 3px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.et-num-right {
+  font-size: 10px;
+  bottom: 0;
+}
+
+.et-num-right span {
+  position: absolute;
+  right: 3px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.et-num-top {
+  font-size: 10px;
+  top: 0;
+}
+
+.et-num-top span {
+  position: absolute;
+  top: 0;
+  left: 13.5px;
+  z-index: 1;
 }
