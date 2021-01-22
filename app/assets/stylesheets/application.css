@@ -6,9 +6,9 @@
 #container {
   border: 5px outset black;
   margin: 2rem;
-  max-height: 815px;
-  max-width: 815px;
-  min-width: 815px;
+  max-height: 885px;
+  max-width: 885px;
+  min-width: 885px;
   padding: 1.5rem;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -20,8 +20,40 @@
   height: 2em;
   width: 2em;
   border: 1px outset #EAEAEA;
-  text-align: center;
   color: white;
+}
+
+/* Map Border Edge */
+.map-edge-bottom {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 4px outset black;
+}
+
+.map-edge-corner {
+  border: 1px solid white;
+}
+
+.map-edge-left {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 4px inset black;
+  border-bottom: 1px solid white;
+}
+
+.map-edge-right {
+  border-top: 1px solid white;
+  border-right: 4px outset black;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.map-edge-top {
+  border-top: 4px inset black;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 /* Starting Area */
@@ -38,105 +70,105 @@
 }
 
 /* Terrain */
-.water-terrain {
-  background-color: #2EADFF;
+.blocking-terrain {
+  background-color: #935500;
+}
+
+.elevation-terrain {
+  background-color: #FFB2B2;
 }
 
 .hindering-terrain {
   background-color: #0DAA06;
 }
 
-.blocking-terrain {
-  background-color: #935500;
+.water-terrain {
+  background-color: #2EADFF;
 }
 
 /* Walls */
-.right-wall {
-  border-right: 1px inset black;
+.bottom-wall {
+  border-bottom: 1px inset black;
 }
 
 .left-wall {
   border-left: 1px outset black;
 }
 
+.right-wall {
+  border-right: 1px inset black;
+}
+
 .top-wall {
   border-top: 1px outset black;
 }
 
-.bottom-wall {
-  border-bottom: 1px inset black;
-}
-
 /* Indoor Walls */
-.indoor-right-wall {
-  border-right: 1px inset yellow;
+.indoor-bottom-wall {
+  border-bottom: 1px inset yellow;
 }
 
 .indoor-left-wall {
   border-left: 1px outset yellow;
 }
 
+.indoor-right-wall {
+  border-right: 1px inset yellow;
+}
+
 .indoor-top-wall {
   border-top: 1px outset yellow;
 }
 
-.indoor-bottom-wall {
-  border-bottom: 1px inset yellow;
-}
-
 /* Windows */
-.right-window {
-  border-right: 1px dashed #4EBCFF;
+.bottom-window {
+  border-bottom: 1px dashed #4EBCFF;
 }
 
 .left-window {
   border-left: 1px dashed #4EBCFF;
 }
 
+.right-window {
+  border-right: 1px dashed #4EBCFF;
+}
+
 .top-window {
   border-top: 1px dashed #4EBCFF;
 }
 
-.bottom-window {
-  border-bottom: 1px dashed #4EBCFF;
-}
-
 /* Doors */
-.right-door {
-  border-right: 1px dashed black;
+.bottom-door {
+  border-bottom: 1px dashed black;
 }
 
 .left-door {
   border-left: 1px dashed black;
 }
 
+.right-door {
+  border-right: 1px dashed black;
+}
+
 .top-door {
   border-top: 1px dashed black;
 }
 
-.bottom-door {
-  border-bottom: 1px dashed black;
-}
-
 /* Elevation Terrain */
-.elevation-terrain {
-  background-color: #FFB2B2;
-}
-
-.right-et-edge {
-  border-right: 1px outset red;
+.bottom-et-edge {
+  border-bottom: 1px outset red;
 }
 
 .left-et-edge {
   border-left: 1px inset red;
 }
 
-.top-et-edge {
-  border-top: 1px inset red;
+.right-et-edge {
+  border-right: 1px outset red;
 }
 
-.bottom-et-edge {
-  border-bottom: 1px outset red;
+.top-et-edge {
+  border-top: 1px inset red;
 }
 
 .bottom-et-transition {
