@@ -21,10 +21,10 @@
     <div id="R1" class="grid-item start-area left-wall"></div>
     <div id="S1" class="grid-item start-area"></div>
     <div id="T1" class="grid-item start-area right-wall"></div>
-    <div id="U1" class="grid-item left-wall right-et"></div>
-    <div id="V1" class="grid-item elevation-terrain top-et left-et"></div>
-    <div id="W1" class="grid-item elevation-terrain top-et"></div>
-    <div id="X1" class="grid-item elevation-terrain top-et right-et"></div>
+    <div id="U1" class="grid-item left-wall right-et-edge"></div>
+    <div id="V1" class="grid-item elevation-terrain top-et-edge left-et-edge"></div>
+    <div id="W1" class="grid-item elevation-terrain top-et-edge"></div>
+    <div id="X1" class="grid-item elevation-terrain top-et-edge right-et-edge"></div>
     <div id="A2" class="grid-item"></div>
     <div id="B2" class="grid-item"></div>
     <div id="C2" class="grid-item"></div>
@@ -45,10 +45,20 @@
     <div id="R2" class="grid-item start-area left-wall"></div>
     <div id="S2" class="grid-item start-area"></div>
     <div id="T2" class="grid-item start-area"></div>
-    <div id="U2" class="grid-item right-et"></div>
-    <div id="V2" class="grid-item elevation-terrain left-et"></div>
+    <div id="U2" class="grid-item right-et-edge">
+      <div class="et-num-right">
+        <span>1</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="V2" class="grid-item elevation-terrain left-et-edge">
+      <div class="et-num-left">
+        <span>2</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
     <div id="W2" class="grid-item elevation-terrain"></div>
-    <div id="X2" class="grid-item elevation-terrain right-et"></div>
+    <div id="X2" class="grid-item elevation-terrain right-et-edge"></div>
     <div id="A3" class="grid-item"></div>
     <div id="B3" class="grid-item"></div>
     <div id="C3" class="grid-item blocking-terrain"></div>
@@ -69,10 +79,15 @@
     <div id="R3" class="grid-item left-wall"></div>
     <div id="S3" class="grid-item"></div>
     <div id="T3" class="grid-item"></div>
-    <div id="U3" class="grid-item right-et"></div>
-    <div id="V3" class="grid-item elevation-terrain left-et bottom-et"></div>
-    <div id="W3" class="grid-item elevation-terrain"></div>
-    <div id="X3" class="grid-item elevation-terrain right-et bottom-et"></div>
+    <div id="U3" class="grid-item right-et-edge"></div>
+    <div id="V3" class="grid-item elevation-terrain left-et-edge bottom-et-edge"></div>
+    <div id="W3" class="grid-item elevation-terrain bottom-et-edge">
+      <div class="et-num-bottom">
+        <span>2</span>
+        <div class="bottom-et-transition"></div>
+      </div>
+    </div>
+    <div id="X3" class="grid-item elevation-terrain right-et-edge bottom-et-edge"></div>
     <div id="A4" class="grid-item"></div>
     <div id="B4" class="grid-item"></div>
     <div id="C4" class="grid-item blocking-terrain"></div>
@@ -94,9 +109,14 @@
     <div id="S4" class="grid-item"></div>
     <div id="T4" class="grid-item right-wall"></div>
     <div id="U4" class="grid-item left-wall"></div>
-    <div id="V4" class="grid-item top-et"></div>
-    <div id="W4" class="grid-item"></div>
-    <div id="X4" class="grid-item top-et"></div>
+    <div id="V4" class="grid-item top-et-edge"></div>
+    <div id="W4" class="grid-item top-et-edge">
+      <div class="et-num-top">
+        <span>1</span>
+        <div class="top-et-transition"></div>
+      </div>
+    </div>
+    <div id="X4" class="grid-item top-et-edge"></div>
     <div id="A5" class="grid-item start-area"></div>
     <div id="B5" class="grid-item start-area"></div>
     <div id="C5" class="grid-item"></div>
@@ -200,8 +220,8 @@
     <div id="E9" class="grid-item"></div>
     <div id="F9" class="grid-item hindering-terrain"></div>
     <div id="G9" class="grid-item hindering-terrain"></div>
-    <div id="H9" class="grid-item hindering-terrain"></div>
-    <div id="I9" class="grid-item hindering-terrain"></div>
+    <div id="H9" class="grid-item hindering-terrain bottom-et-edge"></div>
+    <div id="I9" class="grid-item hindering-terrain bottom-et-edge"></div>
     <div id="J9" class="grid-item hindering-terrain"></div>
     <div id="K9" class="grid-item hindering-terrain"></div>
     <div id="L9" class="grid-item"></div>
@@ -223,10 +243,10 @@
     <div id="D10" class="grid-item"></div>
     <div id="E10" class="grid-item"></div>
     <div id="F10" class="grid-item"></div>
-    <div id="G10" class="grid-item"></div>
-    <div id="H10" class="grid-item"></div>
-    <div id="I10" class="grid-item"></div>
-    <div id="J10" class="grid-item"></div>
+    <div id="G10" class="grid-item right-et-edge bottom-et-edge"></div>
+    <div id="H10" class="grid-item elevation-terrain top-et-edge left-et-edge"></div>
+    <div id="I10" class="grid-item elevation-terrain top-et-edge right-et-edge"></div>
+    <div id="J10" class="grid-item left-et-edge bottom-et-edge"></div>
     <div id="K10" class="grid-item"></div>
     <div id="L10" class="grid-item"></div>
     <div id="M10" class="grid-item"></div>
@@ -246,12 +266,32 @@
     <div id="C11" class="grid-item left-wall"></div>
     <div id="D11" class="grid-item"></div>
     <div id="E11" class="grid-item"></div>
-    <div id="F11" class="grid-item"></div>
-    <div id="G11" class="grid-item"></div>
-    <div id="H11" class="grid-item"></div>
-    <div id="I11" class="grid-item"></div>
-    <div id="J11" class="grid-item"></div>
-    <div id="K11" class="grid-item"></div>
+    <div id="F11" class="grid-item right-et-edge bottom-et-edge">
+      <div class="et-num-right">
+        <span>1</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="G11" class="grid-item elevation-terrain top-et-edge left-et-edge">
+      <div class="et-num-left">
+        <span>2</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
+    <div id="H11" class="grid-item elevation-terrain "></div>
+    <div id="I11" class="grid-item elevation-terrain "></div>
+    <div id="J11" class="grid-item elevation-terrain  top-et-edge right-et-edge">
+      <div class="et-num-right">
+        <span>2</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="K11" class="grid-item left-et-edge bottom-et-edge">
+      <div class="et-num-left">
+        <span>1</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
     <div id="L11" class="grid-item"></div>
     <div id="M11" class="grid-item"></div>
     <div id="N11" class="grid-item right-wall"></div>
@@ -269,14 +309,14 @@
     <div id="B12" class="grid-item start-area right-wall"></div>
     <div id="C12" class="grid-item left-wall"></div>
     <div id="D12" class="grid-item"></div>
-    <div id="E12" class="grid-item"></div>
-    <div id="F12" class="grid-item"></div>
-    <div id="G12" class="grid-item"></div>
-    <div id="H12" class="grid-item"></div>
-    <div id="I12" class="grid-item"></div>
-    <div id="J12" class="grid-item"></div>
-    <div id="K12" class="grid-item"></div>
-    <div id="L12" class="grid-item"></div>
+    <div id="E12" class="grid-item right-et-edge"></div>
+    <div id="F12" class="grid-item elevation-terrain top-et-edge left-et-edge"></div>
+    <div id="G12" class="grid-item elevation-terrain "></div>
+    <div id="H12" class="grid-item elevation-terrain "></div>
+    <div id="I12" class="grid-item elevation-terrain "></div>
+    <div id="J12" class="grid-item elevation-terrain "></div>
+    <div id="K12" class="grid-item elevation-terrain top-et-edge right-et-edge"></div>
+    <div id="L12" class="grid-item left-et-edge"></div>
     <div id="M12" class="grid-item"></div>
     <div id="N12" class="grid-item right-wall"></div>
     <div id="O12" class="grid-item hindering-terrain left-wall"></div>
@@ -293,14 +333,14 @@
     <div id="B13" class="grid-item start-area right-wall"></div>
     <div id="C13" class="grid-item left-wall"></div>
     <div id="D13" class="grid-item"></div>
-    <div id="E13" class="grid-item"></div>
-    <div id="F13" class="grid-item"></div>
-    <div id="G13" class="grid-item"></div>
-    <div id="H13" class="grid-item"></div>
-    <div id="I13" class="grid-item"></div>
-    <div id="J13" class="grid-item"></div>
-    <div id="K13" class="grid-item"></div>
-    <div id="L13" class="grid-item"></div>
+    <div id="E13" class="grid-item right-et-edge"></div>
+    <div id="F13" class="grid-item elevation-terrain  bottom-et-edge left-et-edge"></div>
+    <div id="G13" class="grid-item elevation-terrain "></div>
+    <div id="H13" class="grid-item elevation-terrain "></div>
+    <div id="I13" class="grid-item elevation-terrain "></div>
+    <div id="J13" class="grid-item elevation-terrain "></div>
+    <div id="K13" class="grid-item elevation-terrain  bottom-et-edge right-et-edge"></div>
+    <div id="L13" class="grid-item left-et-edge"></div>
     <div id="M13" class="grid-item"></div>
     <div id="N13" class="grid-item right-wall"></div>
     <div id="O13" class="grid-item hindering-terrain left-wall"></div>
@@ -318,12 +358,32 @@
     <div id="C14" class="grid-item left-wall"></div>
     <div id="D14" class="grid-item"></div>
     <div id="E14" class="grid-item"></div>
-    <div id="F14" class="grid-item"></div>
-    <div id="G14" class="grid-item"></div>
-    <div id="H14" class="grid-item"></div>
-    <div id="I14" class="grid-item"></div>
-    <div id="J14" class="grid-item"></div>
-    <div id="K14" class="grid-item"></div>
+    <div id="F14" class="grid-item top-et-edge right-et-edge">
+      <div class="et-num-right">
+        <span>1</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="G14" class="grid-item elevation-terrain bottom-et-edge left-et-edge">
+      <div class="et-num-left">
+        <span>2</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
+    <div id="H14" class="grid-item elevation-terrain"></div>
+    <div id="I14" class="grid-item elevation-terrain"></div>
+    <div id="J14" class="grid-item elevation-terrain bottom-et-edge right-et-edge">
+      <div class="et-num-right">
+        <span>2</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="K14" class="grid-item top-et-edge left-et-edge">
+      <div class="et-num-left">
+        <span>1</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
     <div id="L14" class="grid-item"></div>
     <div id="M14" class="grid-item"></div>
     <div id="N14" class="grid-item right-wall"></div>
@@ -343,10 +403,10 @@
     <div id="D15" class="grid-item"></div>
     <div id="E15" class="grid-item"></div>
     <div id="F15" class="grid-item"></div>
-    <div id="G15" class="grid-item"></div>
-    <div id="H15" class="grid-item"></div>
-    <div id="I15" class="grid-item"></div>
-    <div id="J15" class="grid-item"></div>
+    <div id="G15" class="grid-item top-et-edge right-et-edge"></div>
+    <div id="H15" class="grid-item elevation-terrain bottom-et-edge left-et-edge"></div>
+    <div id="I15" class="grid-item elevation-terrain bottom-et-edge right-et-edge"></div>
+    <div id="J15" class="grid-item top-et-edge left-et-edge"></div>
     <div id="K15" class="grid-item"></div>
     <div id="L15" class="grid-item"></div>
     <div id="M15" class="grid-item"></div>
@@ -368,8 +428,8 @@
     <div id="E16" class="grid-item"></div>
     <div id="F16" class="grid-item hindering-terrain"></div>
     <div id="G16" class="grid-item hindering-terrain"></div>
-    <div id="H16" class="grid-item hindering-terrain"></div>
-    <div id="I16" class="grid-item hindering-terrain"></div>
+    <div id="H16" class="grid-item hindering-terrain top-et-edge"></div>
+    <div id="I16" class="grid-item hindering-terrain top-et-edge"></div>
     <div id="J16" class="grid-item hindering-terrain"></div>
     <div id="K16" class="grid-item hindering-terrain"></div>
     <div id="L16" class="grid-item"></div>
@@ -457,11 +517,13 @@
     <div id="V19" class="grid-item"></div>
     <div id="W19" class="grid-item start-area"></div>
     <div id="X19" class="grid-item start-area"></div>
-    <div id="A20" class="grid-item start-area bottom-et transition-bottom">
-      1
-      <div class="bottom-et-transition"></div>
+    <div id="A20" class="grid-item start-area bottom-et-edge">
+      <div class="et-num-bottom">
+        <span>1</span>
+        <div class="bottom-et-transition"></div>
+      </div>
     </div>
-    <div id="B20" class="grid-item start-area right-wall bottom-et"></div>
+    <div id="B20" class="grid-item start-area right-wall bottom-et-edge"></div>
     <div id="C20" class="grid-item left-wall"></div>
     <div id="D20" class="grid-item"></div>
     <div id="E20" class="grid-item"></div>
@@ -484,12 +546,14 @@
     <div id="V20" class="grid-item"></div>
     <div id="W20" class="grid-item start-area"></div>
     <div id="X20" class="grid-item start-area"></div>
-    <div id="A21" class="grid-item elevation-terrain left-et top-et">
-      2
-      <div class="top-et-transition"></div>
+    <div id="A21" class="grid-item elevation-terrain left-et-edge top-et-edge">
+      <div class="et-num-top">
+        <span>2</span>
+        <div class="top-et-transition "></div>
+      </div>
     </div>
-    <div id="B21" class="grid-item elevation-terrain right-et top-et"></div>
-    <div id="C21" class="grid-item left-et"></div>
+    <div id="B21" class="grid-item elevation-terrain right-et-edge top-et-edge"></div>
+    <div id="C21" class="grid-item left-et-edge"></div>
     <div id="D21" class="grid-item"></div>
     <div id="E21" class="grid-item"></div>
     <div id="F21" class="grid-item"></div>
@@ -511,10 +575,10 @@
     <div id="V21" class="grid-item"></div>
     <div id="W21" class="grid-item"></div>
     <div id="X21" class="grid-item"></div>
-    <div id="A22" class="grid-item elevation-terrain left-et"></div>
-    <div id="B22" class="grid-item elevation-terrain bottom-et right-et"></div>
-    <div id="C22" class="grid-item left-et"></div>
-    <div id="D22" class="grid-item"></div>
+    <div id="A22" class="grid-item elevation-terrain left-et-edge"></div>
+    <div id="B22" class="grid-item elevation-terrain right-et-edge"></div>
+    <div id="C22" class="grid-item bottom-et-edge left-et-edge"></div>
+    <div id="D22" class="grid-item bottom-et-edge"></div>
     <div id="E22" class="grid-item"></div>
     <div id="F22" class="grid-item"></div>
     <div id="G22" class="grid-item water-terrain"></div>
@@ -535,11 +599,11 @@
     <div id="V22" class="grid-item"></div>
     <div id="W22" class="grid-item"></div>
     <div id="X22" class="grid-item"></div>
-    <div id="A23" class="grid-item elevation-terrain right-et left-et"></div>
-    <div id="B23" class="grid-item top-et left-et"></div>
-    <div id="C23" class="grid-item"></div>
-    <div id="D23" class="grid-item"></div>
-    <div id="E23" class="grid-item start-area"></div>
+    <div id="A23" class="grid-item elevation-terrain left-et-edge"></div>
+    <div id="B23" class="grid-item elevation-terrain"></div>
+    <div id="C23" class="grid-item elevation-terrain top-et-edge"></div>
+    <div id="D23" class="grid-item elevation-terrain top-et-edge right-et-edge"></div>
+    <div id="E23" class="grid-item start-area left-et-edge"></div>
     <div id="F23" class="grid-item start-area"></div>
     <div id="G23" class="grid-item start-area"></div>
     <div id="H23" class="grid-item start-area"></div>
@@ -559,11 +623,21 @@
     <div id="V23" class="grid-item"></div>
     <div id="W23" class="grid-item"></div>
     <div id="X23" class="grid-item"></div>
-    <div id="A24" class="grid-item elevation-terrain right-et left-et bottom-et"></div>
-    <div id="B24" class="grid-item left-et"></div>
-    <div id="C24" class="grid-item"></div>
-    <div id="D24" class="grid-item"></div>
-    <div id="E24" class="grid-item start-area"></div>
+    <div id="A24" class="grid-item elevation-terrain left-et-edge bottom-et-edge"></div>
+    <div id="B24" class="grid-item elevation-terrain bottom-et-edge"></div>
+    <div id="C24" class="grid-item elevation-terrain bottom-et-edge"></div>
+    <div id="D24" class="grid-item elevation-terrain bottom-et-edge right-et-edge">
+      <div class="et-num-right">
+        <span>2</span>
+        <div class="right-et-transition"></div>
+      </div>
+    </div>
+    <div id="E24" class="grid-item start-area left-et-edge">
+      <div class="et-num-left">
+        <span>1</span>
+        <div class="left-et-transition"></div>
+      </div>
+    </div>
     <div id="F24" class="grid-item start-area"></div>
     <div id="G24" class="grid-item start-area"></div>
     <div id="H24" class="grid-item start-area"></div>
