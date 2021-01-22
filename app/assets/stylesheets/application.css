@@ -1,15 +1,299 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root: {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  border: 5px outset black;
+  margin: 2rem;
+  max-height: 885px;
+  max-width: 885px;
+  min-width: 885px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  position: relative;
+  height: 2em;
+  width: 2em;
+  border: 1px outset #EAEAEA;
+  color: white;
+}
+
+/* Map Border Edge */
+.map-edge-bottom {
+  color: black;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 4px outset black;
+}
+
+.map-edge-corner {
+  border: 1px solid white;
+}
+
+.map-edge-left {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 4px inset black;
+  border-bottom: 1px solid white;
+}
+
+.map-edge-right {
+  color: black;
+  text-align: center;
+  border-top: 1px solid white;
+  border-right: 4px outset black;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.map-edge-top {
+  border-top: 4px inset black;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.map-edge-bottom span {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.map-edge-right span {
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+}
+
+/* Starting Area */
+.start-area {
+  background-color: #E7AEFB;
+  opacity: .7;
+}
+
+.start-area:hover {
+  opacity: none;
+  outline-color: #5C0979;
+  outline-style: auto;
+  outline-width: thin;
+}
+
+/* Terrain */
+.blocking-terrain {
+  background-color: #935500;
+}
+
+.elevation-terrain {
+  background-color: #FFB2B2;
+}
+
+.hindering-terrain {
+  background-color: #0DAA06;
+}
+
+.obscuring-terrain {
+  background-color: #BEBEBE;
+}
+
+.special-terrain {
+  background-color: #FFEED7;
+}
+
+.water-terrain {
+  background-color: #2EADFF;
+}
+
+/* Walls */
+.bottom-wall {
+  border-bottom: 1px inset black;
+}
+
+.left-wall {
+  border-left: 1px outset black;
+}
+
+.right-wall {
+  border-right: 1px inset black;
+}
+
+.top-wall {
+  border-top: 1px outset black;
+}
+
+/* Indoor Walls */
+.indoor-bottom-wall {
+  border-bottom: 1px inset yellow;
+}
+
+.indoor-left-wall {
+  border-left: 1px outset yellow;
+}
+
+.indoor-right-wall {
+  border-right: 1px inset yellow;
+}
+
+.indoor-top-wall {
+  border-top: 1px outset yellow;
+}
+
+/* Windows */
+.bottom-window {
+  border-bottom: 1px dashed #4EBCFF;
+}
+
+.left-window {
+  border-left: 1px dashed #4EBCFF;
+}
+
+.right-window {
+  border-right: 1px dashed #4EBCFF;
+}
+
+.top-window {
+  border-top: 1px dashed #4EBCFF;
+}
+
+/* Doors */
+.bottom-door {
+  border-bottom: 1px dashed black;
+}
+
+.left-door {
+  border-left: 1px dashed black;
+}
+
+.right-door {
+  border-right: 1px dashed black;
+}
+
+.top-door {
+  border-top: 1px dashed black;
+}
+
+/* Elevation Terrain */
+.bottom-et-edge {
+  border-bottom: 1px outset red;
+}
+
+.left-et-edge {
+  border-left: 1px inset red;
+}
+
+.right-et-edge {
+  border-right: 1px outset red;
+}
+
+.top-et-edge {
+  border-top: 1px inset red;
+}
+
+.bottom-et-transition {
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px inset transparent;
+  border-right: 16px inset transparent;
+  border-bottom: 16px inset red;
+  bottom: 0px;
+}
+
+.left-et-transition {
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 16px outset transparent;
+  border-bottom: 16px outset transparent;
+  border-left: 16px outset red;
+  left: 0px;
+}
+
+.right-et-transition {
+  color: white;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 16px inset transparent;
+  border-bottom: 16px inset transparent;
+  border-right: 16px inset red;
+  right: 0px;
+}
+
+.top-et-transition {
+  text-align: center;
+  color: white;
+  width: 0;
+  height: 0;
+  border-left: 16px outset transparent;
+  border-right: 16px outset transparent;
+  border-top: 16px outset red;
+}
+
+.et-num-bottom {
+  font-size: 10px;
+}
+
+.et-num-bottom span {
+  position: absolute;
+  bottom: 0;
+  left: 13.5px;
+  z-index: 1;
+}
+
+.et-num-left {
+  font-size: 10px;
+}
+
+.et-num-left span {
+  position: absolute;
+  left: 3px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.et-num-right {
+  font-size: 10px;
+}
+
+.et-num-right span {
+  position: absolute;
+  right: 3px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.et-num-top {
+  font-size: 10px;
+}
+
+.et-num-top span {
+  position: absolute;
+  top: 0;
+  left: 13.5px;
+  z-index: 1;
+}
+
+/* Special Terrain */
+.bottom-st-edge {
+  border-bottom: 1px inset #FFA22B;
+}
+
+.left-st-edge {
+  border-left: 1px outset #FFA22B;
+}
+
+.right-st-edge {
+  border-right: 1px inset #FFA22B;
+}
+
+.top-st-edge {
+  border-top: 1px outset #FFA22B;
+}
