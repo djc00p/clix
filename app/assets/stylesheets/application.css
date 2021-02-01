@@ -1,14 +1,9 @@
-:root: {
-  --grid-cols: 1;
-  --grid-rows: 1;
-}
-
 #container {
   border: 5px outset black;
   margin: 2rem;
-  max-height: 885px;
-  max-width: 885px;
-  min-width: 885px;
+  max-height: 890px;
+  max-width: 890px;
+  min-width: 890px;
   padding: 1.5rem;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -19,7 +14,7 @@
   position: relative;
   height: 2em;
   width: 2em;
-  border: 1px outset #EAEAEA;
+  border: 1px outset #eaeaea;
   color: white;
 }
 
@@ -73,13 +68,13 @@
 
 /* Starting Area */
 .start-area {
-  background-color: #E7AEFB;
-  opacity: .7;
+  background-color: #e7aefb;
+  opacity: 0.7;
 }
 
 .start-area:hover {
   opacity: none;
-  outline-color: #5C0979;
+  outline-color: #5c0979;
   outline-style: auto;
   outline-width: thin;
 }
@@ -90,23 +85,23 @@
 }
 
 .elevation-terrain {
-  background-color: #FFB2B2;
+  background-color: #ffb2b2;
 }
 
 .hindering-terrain {
-  background-color: #0DAA06;
+  background-color: #0daa06;
 }
 
 .obscuring-terrain {
-  background-color: #BEBEBE;
+  background-color: #bebebe;
 }
 
 .special-terrain {
-  background-color: #FFEED7;
+  background-color: #ffeed7;
 }
 
 .water-terrain {
-  background-color: #2EADFF;
+  background-color: #2eadff;
 }
 
 /* Walls */
@@ -145,19 +140,19 @@
 
 /* Windows */
 .bottom-window {
-  border-bottom: 1px dashed #4EBCFF;
+  border-bottom: 1px dashed #4ebcff;
 }
 
 .left-window {
-  border-left: 1px dashed #4EBCFF;
+  border-left: 1px dashed #4ebcff;
 }
 
 .right-window {
-  border-right: 1px dashed #4EBCFF;
+  border-right: 1px dashed #4ebcff;
 }
 
 .top-window {
-  border-top: 1px dashed #4EBCFF;
+  border-top: 1px dashed #4ebcff;
 }
 
 /* Doors */
@@ -283,17 +278,17 @@
 
 /* Special Terrain */
 .bottom-st-edge {
-  border-bottom: 1px inset #FFA22B;
+  border-bottom: 1px inset #ffa22b;
 }
 
 .left-st-edge {
-  border-left: 1px outset #FFA22B;
+  border-left: 1px outset #ffa22b;
 }
 
 .right-st-edge {
-  border-right: 1px inset #FFA22B;
+  border-right: 1px inset #ffa22b;
 }
 
 .top-st-edge {
-  border-top: 1px outset #FFA22B;
+  border-top: 1px outset #ffa22b;
 }
