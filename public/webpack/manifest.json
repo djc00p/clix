@@ -1,24 +1,24 @@
 {
-  "application.js": "/webpack/application-649c096a7521d0cd1295.js",
-  "application.js.map": "/webpack/application-649c096a7521d0cd1295.js.map",
+  "application.js": "/webpack/application-afa79c8c0c673f66f440.js",
+  "application.js.map": "/webpack/application-afa79c8c0c673f66f440.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/webpack/application-649c096a7521d0cd1295.js"
+        "/webpack/application-afa79c8c0c673f66f440.js"
       ],
       "js.map": [
-        "/webpack/application-649c096a7521d0cd1295.js.map"
+        "/webpack/application-afa79c8c0c673f66f440.js.map"
       ]
     },
     "hello-world-bundle": {
       "js": [
-        "/webpack/hello-world-bundle-649c096a7521d0cd1295.js"
+        "/webpack/hello-world-bundle-afa79c8c0c673f66f440.js"
       ],
       "js.map": [
-        "/webpack/hello-world-bundle-649c096a7521d0cd1295.js.map"
+        "/webpack/hello-world-bundle-afa79c8c0c673f66f440.js.map"
       ]
     }
   },
-  "hello-world-bundle.js": "/webpack/hello-world-bundle-649c096a7521d0cd1295.js",
-  "hello-world-bundle.js.map": "/webpack/hello-world-bundle-649c096a7521d0cd1295.js.map"
+  "hello-world-bundle.js": "/webpack/hello-world-bundle-afa79c8c0c673f66f440.js",
+  "hello-world-bundle.js.map": "/webpack/hello-world-bundle-afa79c8c0c673f66f440.js.map"
 }
