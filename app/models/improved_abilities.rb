@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ImprovedAbilities < ApplicationRecord
-  validates_presence_of :symbol
-  validates_presence_of :movement
-  validates_presence_of :targeting
+  validates :symbol, presence: true
+  validates :movement, presence: true
+  validates :targeting, presence: true
 end

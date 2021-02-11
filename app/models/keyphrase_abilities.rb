@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class KeyphraseAbilities < ApplicationRecord
-  validates_presence_of :keyphrase
-  validates_presence_of :description
+  validates :keyphrase, presence: true
+  validates :description, presence: true
 end

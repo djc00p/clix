@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class TeamAffiliations < ApplicationRecord
-  validates_presence_of :symbol
-  validates_presence_of :team_name
-  validates_presence_of :description
+  validates :symbol, presence: true
+  validates :team_name, presence: true
+  validates :description, presence: true
 end
