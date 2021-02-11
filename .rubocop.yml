@@ -1,0 +1,11 @@
+require: rubocop-rails
+Documentation:
+  Enabled: false
+AllCops:
+  Includes:
+    - Rakefile
+    - config.ru
+  Excludes:
+    - db/**
+    - config/**
+    - script/**
