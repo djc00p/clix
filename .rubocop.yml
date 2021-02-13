@@ -5,20 +5,22 @@ Documentation:
   Enabled: false
 AllCops:
   TargetRubyVersion: 3.0
-  Includes:
+  Include:
     - Rakefile
     - config.ru
     - app/controllers/**
     - app/models/**
     - spec/**/**
-  Excludes:
+  Exclude:
     - app/assets/**
     - db/**
     - config/**
     - script/**
     - bin/**
+    - tmp/**
+    - vender/**
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/MethodLength:
