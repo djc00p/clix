@@ -4,11 +4,15 @@ require:
 Documentation:
   Enabled: false
 AllCops:
+  TargetRubyVersion: 3.0
   Includes:
     - Rakefile
     - config.ru
-    - spec/**
+    - app/controllers/**
+    - app/models/**
+    - spec/**/**
   Excludes:
+    - app/assets/**
     - db/**
     - config/**
     - script/**
