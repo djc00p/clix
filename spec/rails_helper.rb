@@ -15,6 +15,7 @@ require "capybara/rails"
 require "capybara-screenshot/rspec"
 require "webdrivers"
 require "support/factory_bot"
+require "support/driver_registration"
 require "simplecov"
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start
