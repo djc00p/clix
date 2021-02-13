@@ -6,7 +6,8 @@ FactoryBot.define do
     color { "#FF6600" }
     ability { "Leap/Climb" }
     description do
-      "Elevation does not affect adjacency when choosing targets for a close attack. MOVE: , BREAKAWAY +2. Move (up to your speed value)."
+      "Elevation does not affect adjacency when choosing targets for a close attack.
+      MOVE: , BREAKAWAY +2. Move (up to your speed value)."
     end
   end
 end
