@@ -1,11 +1,27 @@
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - rubocop-rspec
 Documentation:
   Enabled: false
 AllCops:
   Includes:
     - Rakefile
     - config.ru
+    - spec/**
   Excludes:
     - db/**
     - config/**
     - script/**
+    - bin/**
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/BlockLength:
+  Max: 105
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

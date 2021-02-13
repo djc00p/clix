@@ -25,6 +25,7 @@ gem 'figaro'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rack-timeout'
 gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

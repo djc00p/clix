@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV['RAILS_ENV'] ||= 'test'
-ENV['NODE_ENV'] ||= 'test'
-require 'coveralls'
-Coveralls.wear!('rails') # must occur before any of your application code is required
-require 'spec_helper'
-require File.expand_path('../config/environment', __dir__)
+ENV["RAILS_ENV"] ||= "test"
+ENV["NODE_ENV"] ||= "test"
+require "coveralls"
+Coveralls.wear!("rails") # must occur before any of your application code is required
+require "spec_helper"
+require File.expand_path("../config/environment", __dir__)
 # Prevent database truncation if the environment is production
-abort('The Rails environment is running in production mode!') if Rails.env.production?
-require 'rspec/rails'
+abort("The Rails environment is running in production mode!") if Rails.env.production?
+require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
-require 'capybara/rails'
-require 'capybara-screenshot/rspec'
-require 'webdrivers'
-require 'support/factory_bot'
-require 'simplecov'
+require "capybara/rails"
+require "capybara-screenshot/rspec"
+require "webdrivers"
+require "support/factory_bot"
+require "simplecov"
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -78,7 +78,7 @@ RSpec.configure do |config|
   default_driver = :selenium_chrome_headless
 
   supported_drivers = %i[selenium_chrome_headless selenium_chrome selenium_firefox selenium]
-  driver = ENV['DRIVER'].try(:to_sym) || default_driver
+  driver = ENV["DRIVER"].try(:to_sym) || default_driver
   Capybara.default_driver = driver
 
   raise "Unsupported driver: #{driver} (supported = #{supported_drivers})" unless supported_drivers.include?(driver)
@@ -99,7 +99,7 @@ RSpec.configure do |config|
   Capybara.default_driver = driver
 
   Capybara.register_server(Capybara.javascript_driver) do |app, port|
-    require 'rack/handler/puma'
+    require "rack/handler/puma"
     Rack::Handler::Puma.run(app, Port: port)
   end
   Capybara.server = :puma
@@ -111,21 +111,21 @@ RSpec.configure do |config|
   end
 
   # Capybara.default_max_wait_time = 15
-  puts '=' * 80
+  puts "=" * 80
   puts "Capybara using driver: #{Capybara.javascript_driver}"
-  puts '=' * 80
+  puts "=" * 80
 
-  Capybara.save_path = Rails.root.join('tmp', 'capybara')
+  Capybara.save_path = Rails.root.join("tmp/capybara")
   Capybara::Screenshot.prune_strategy = { keep: 10 }
 
-  config.append_after(:each) do
+  config.append_after do
     Capybara.reset_sessions!
   end
 
   # This will insert a <base> tag with the asset host into the pages created by
   # save_and_open_page, meaning that relative links will be loaded from the
   # development server if it is running.
-  Capybara.asset_host = 'http://localhost:3000'
+  Capybara.asset_host = "http://localhost:3000"
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
