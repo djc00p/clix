@@ -1,24 +1,14 @@
 if %w[development test].include? Rails.env
   namespace :lint do
-
-    # This fails: https://github.com/bbatsov/rubocop/issues/1840
-    # RuboCop::RakeTask.new
-
-    desc "Run Rubocop lint as shell. Specify option fix to auto-correct (and don't have uncommitted files!)."
-    task :rubocop, [:fix] => [] do |_t, args|
-      def to_bool(str)
-        return true if str =~ /^(true|t|yes|y|1)$/i
-        return false if str.blank? || str =~ /^(false|f|no|n|0)$/i
-        raise ArgumentError, "invalid value for Boolean: \"#{str}\""
-      end
-
-      fix = (args.fix == "fix") || to_bool(args.fix)
-      cmd = "rubocop -S -D#{fix ? ' -a' : ''} ."
-      puts "Running Rubocop Linters via `#{cmd}`#{fix ? ' auto-correct is turned on!' : ''}"
-      sh cmd
+    require "rubocop/rake_task"
+    
+    desc "Rubocop"
+    RuboCop::RakeTask.new(:rubocop) do |t|
+      puts "Running Rubocop Linters via `rubocop -D -a --disable-uncorrectable`"
+      t.options = %w(-D -a --disable-uncorrectable)
     end
 
-    desc "eslint"
+    desc "ESLint"
     task :eslint do
       cmd = "eslint client/**"
       puts "Running eslint via `#{cmd}`"
