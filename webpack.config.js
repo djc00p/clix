@@ -1,17 +1,19 @@
 // webpack.config.js
 module.exports = {
   module: {
-    loaders: [
-      { exclude: ["node_modules"], loader: "babel", test: /\.jsx?$/ },
-      { loader: "url-loader", test: /\.gif$/ },
-      { loader: "file-loader", test: /\.(ttf|eot|svg)$/ },
-    ],
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: ["node_modules"],
+        use: "babel-loader",
+      },
+      { test: /\.gif$/, use: "url-loader" },
+      { test: /\.(ttf|eot|svg)$/, use: "file-loader" },
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
-          "css-loader",
+          { loader: "style-loader" },
+          { loader: "css-loader" },
           {
             loader: "postcss-loader",
             options: {
