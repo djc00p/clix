@@ -13,7 +13,7 @@ const urlFileSizeCutover = 1000; // below 10k, inline, small 1K is to test file 
 // rules
 sassLoader.use.push({
   loader: "sass-resources-loader",
-  option: {
+  options: {
     resources: sassResources,
   },
 });

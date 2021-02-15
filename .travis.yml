@@ -1,4 +1,11 @@
 matrix:
+  env:
+    global:
+      - RAILS_ENV=test
+      - NODE_ENV=test
+      - DRIVER=selenium_chrome
+      - CHROME_BIN=/usr/bin/google-chrome
+      - USE_COVERALLS=TRUE
   include:
     - language: ruby
       cache: bundler
@@ -19,11 +26,3 @@ matrix:
       node_js:
         - "15"
       script: "jest"
-
-    - env:
-      global:
-        - RAILS_ENV=test
-        - NODE_ENV=test
-        - DRIVER=selenium_chrome
-        - CHROME_BIN=/usr/bin/google-chrome
-        - USE_COVERALLS=TRUE
