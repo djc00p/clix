@@ -1,7 +1,7 @@
 const environment = require("./environment");
 const devBuild = process.env.NODE_ENV === "development";
 const isHMR = process.env.WEBPACK_DEV_SERVER === "TRUE";
-const ReactRefreshWepackPlugin = require("@pmmwh/react-refresh-webpack-plugin");
+const ReactRefreshWepackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const webpack = require("webpack");
 
 if (devBuild && !isHMR) {
