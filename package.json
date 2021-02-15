@@ -27,6 +27,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "18.2.1",
@@ -35,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "identity-obj-proxy": "^3.0.0",
     "stylelint": "^13.10.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
@@ -42,5 +45,25 @@
   },
   "browser": {
     "fs": false
+  },
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js"
+    }
   }
 }
