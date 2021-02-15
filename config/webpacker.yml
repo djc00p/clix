@@ -54,6 +54,8 @@ development:
   <<: *default
   compile: true
 
+  public_output_path: webpack/development
+
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
   check_yarn_integrity: true
 
@@ -91,6 +93,8 @@ test:
 
 production:
   <<: *default
+
+  public_output_path: webpack/development
 
   # Production depends on precompilation of packs prior to booting for performance.
   compile: false
