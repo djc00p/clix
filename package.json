@@ -36,6 +36,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "18.2.1",
@@ -47,6 +48,7 @@
     "identity-obj-proxy": "^3.0.0",
     "postcss": "^8.2.6",
     "postcss-loader": "^5.0.0",
+    "react-refresh": "^0.9.0",
     "react-test-renderer": "^17.0.1",
     "stylelint": "^13.10.0",
     "stylelint-config-standard": "^20.0.0",
@@ -71,9 +73,7 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
-      "^react(.*)$": "<rootDir>/vendor/react-master$1",
-      "^config$": "<rootDir>/configs/app-config.js"
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
   }
 }
