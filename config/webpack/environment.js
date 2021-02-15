@@ -1,5 +1,6 @@
 const { environment } = require("@rails/webpacker");
 
+const sassResources = ["./client/app/assets/styles/app-variables.scss"];
 const aliasConfig = require("./alias");
 const rules = environment.loaders;
 const fileLoader = rules.get("file");
