@@ -15,6 +15,15 @@ matrix:
       script: "bundle exec rspec"
 
     - language: node_js
+      cache: yarn
       node_js:
         - "15"
-      script: "true"
+      script: "jest"
+
+    - env:
+      global:
+        - RAILS_ENV=test
+        - NODE_ENV=test
+        - DRIVER=selenium_chrome
+        - CHROME_BIN=/usr/bin/google-chrome
+        - USE_COVERALLS=TRUE
