@@ -1,3 +1,24 @@
+language:
+  - ruby
+  - node_js
+
+rbenv:
+  - 3.0.0
+
+node_js:
+  - "15"
+
+os: linux
+
+dist: trusty
+
+cache:
+  bundler: true
+  directories: node_modules
+  yarn: true
+
+gemfile: Gemfile
+
 env:
   global:
     - RAILS_ENV=test
@@ -5,27 +26,20 @@ env:
     - DRIVER=selenium_chrome
     - CHROME_BIN=/usr/bin/google-chrome
     - USE_COVERALLS=TRUE
-matrix:
-  include:
-    - language: ruby
-      cache: bundler
-      rbenv:
-        - 3.0.0
-      services:
-        - postgresql
-      before_install:
-        - gem update --system
-        - gem install bundler:2.2.7
-      before_script:
-        - cp config/database.yml.travis config/database.yml
-        - psql -c 'create database travis_ci_test;' -U postgres
-      script: "bundle exec rspec"
 
-    - language: node_js
-      cache: yarn
-      node_js:
-        - "15"
-      before_install:
-        - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
-        - export PATH="$HOME/.yarn/bin:$PATH"
-      script: "yarn run test:client"
+services:
+  - postgresql
+
+before_install:
+  - gem update --system
+  - gem install bundler:2.2.7
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U
+
+script:
+  - bundle exec rspec
+  - yarn run test:client
