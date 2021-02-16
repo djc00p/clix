@@ -22,7 +22,7 @@ const serverConfig = merge(environment.toWebpackConfig(), {
   target: "web",
   entry: "./client/app/bundles/HelloWorld/startup/serverRegistration.jsx",
   output: {
-    filename: "server-bundle.js",
+    filename: "server/server-bundle.js",
 
     // https://webpack.js.org/configuration/output/#outputglobalobject
     globalObject: "this",

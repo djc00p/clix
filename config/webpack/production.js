@@ -7,13 +7,12 @@ const serverConfig = require("./server");
 
 const optimization = {
   splitChunks: {
-    chunks: "async",
+    chunks: "all",
     cacheGroups: {
-      vendor: {
-        chunks: "async",
+      defaultVendors: {
+        chunks: "all",
         name: "vendor",
         test: "vendor",
-        enforce: true,
       },
     },
   },

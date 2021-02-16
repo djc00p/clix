@@ -4,17 +4,16 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development";
 // (for SSR of React components). This is easy enough as we can export arrays of webpack configs.
 const clientEnvironment = require("./client");
 const serverConfig = require("./server");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 
 const optimization = {
   splitChunks: {
-    chunks: "async",
+    chunks: "all",
     cacheGroups: {
-      vendor: {
-        chunks: "async",
+      defaultVendors: {
+        chunks: "all",
         name: "vendor",
         test: "vendor",
-        enforce: "true",
       },
     },
   },
@@ -23,14 +22,14 @@ const optimization = {
 clientEnvironment.splitChunks((config) =>
   Object.assign({}, config, { optimization: optimization }));
 
-const clientConfig = merge(clientEnvironment.toWebpaclConfig(), {
+const clientConfig = merge(clientEnvironment.toWebpackConfig(), {
   mode: "development",
   entry: {
     "vendor-bundle": ["jquery-ujs"],
   },
   output: {
-    filename: "[name].js",
-    chunkFilename: "[name].bundle.js",
+    filename: "js/[name]/[name].js",
+    chunkFilename: "js/[name]/[name].bundle.js",
     path: clientEnvironment.config.output.path,
   },
 });
