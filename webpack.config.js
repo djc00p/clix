@@ -38,10 +38,10 @@ module.exports = {
       config$: "./configs/app-config.js",
       react: "./vendor/react-master",
     },
-    extensions: ["", "js", "jsx"],
+    extensions: ["js", "jsx"],
     modules: [
       "node_modules",
-      "bower_components",
+      "bowser_components",
       "shared",
       "/shared/vendor/modules",
     ],
