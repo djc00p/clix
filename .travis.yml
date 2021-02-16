@@ -1,16 +1,10 @@
-language:
-  - ruby
-  - node_js
+language: ruby
 
 rbenv:
   - 3.0.0
 
-node_js:
-  - "15"
-
-os: linux
-
-dist: trusty
+services:
+  - postgresql
 
 cache:
   bundler: true
@@ -27,14 +21,18 @@ env:
     - CHROME_BIN=/usr/bin/google-chrome
     - USE_COVERALLS=TRUE
 
-services:
-  - postgresql
-
 before_install:
   - gem update --system
   - gem install bundler:2.2.7
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
   - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+  - travis_retry nvm install 12
+  - node -v
+  - travis_retry npm i -g yarn
+  - bundle
+  - yarn
 
 before_script:
   - cp config/database.yml.travis config/database.yml
