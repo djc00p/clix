@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_231258) do
+ActiveRecord::Schema.define(version: 2021_02_11_164746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,12 +19,16 @@ ActiveRecord::Schema.define(version: 2020_10_20_231258) do
     t.string "symbol"
     t.text "movement"
     t.text "targeting"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "keyphrase_abilities", force: :cascade do |t|
     t.string "keyphrase"
     t.string "symbol"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "power_abilities", force: :cascade do |t|
@@ -32,12 +36,16 @@ ActiveRecord::Schema.define(version: 2020_10_20_231258) do
     t.string "color"
     t.string "ability"
     t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "team_affiliations", force: :cascade do |t|
     t.string "symbol"
     t.string "team_name"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

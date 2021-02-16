@@ -1,0 +1,16 @@
+{
+  "application.js": "/webpack/test/js/application-c99f9f2bb06042270dfc.js",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/webpack/test/js/application-c99f9f2bb06042270dfc.js"
+      ]
+    },
+    "hello-world-bundle": {
+      "js": [
+        "/webpack/test/js/hello-world-bundle-d16b27874f71815fbea8.js"
+      ]
+    }
+  },
+  "hello-world-bundle.js": "/webpack/test/js/hello-world-bundle-d16b27874f71815fbea8.js"
+}
