@@ -1,37 +1,39 @@
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-// We need to compile both our development JS (for serving to the client) and our server JS
-// (for SSR of React components). This is easy enough as we can export arrays of webpack configs.
-const clientEnvironment = require("./client");
-const serverConfig = require("./server");
-const { merge } = require("webpack-merge");
+const { devServer } = require("@rails/webpacker");
+const webpackConfig = require("./webpackConfig");
 
-const optimization = {
-  splitChunks: {
-    chunks: "all",
-    cacheGroups: {
-      defaultVendors: {
-        chunks: "all",
-        name: "vendor",
-        test: "vendor",
-      },
-    },
-  },
+// module.exports = webpackConfig();
+
+const developmentOnly = () => {
+  const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+    .BundleAnalyzerPlugin;
+  const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+
+  const environment = require("./environment");
+
+  const isWebpackDevServer = process.env.WEBPACK_DEV_SERVER;
+
+  const isAnalyze = typeof process.env.BUNDLE_ANALYZE !== "undefined";
+
+  //plugins
+  if (isAnalyze) {
+    environment.plugins.append(
+      "BundleAnalyzerPlugin",
+      new BundleAnalyzerPlugin()
+    );
+  }
+
+  if (isWebpackDevServer) {
+    environment.plugins.append(
+      "ReactRefreshWebpackPlugin",
+      new ReactRefreshWebpackPlugin({
+        overlay: {
+          sockPort: devServer.port,
+        },
+      })
+    );
+  }
 };
 
-clientEnvironment.splitChunks((config) =>
-  Object.assign({}, config, { optimization: optimization }));
-
-const clientConfig = merge(clientEnvironment.toWebpackConfig(), {
-  mode: "development",
-  entry: {
-    "vendor-bundle": ["jquery-ujs"],
-  },
-  output: {
-    filename: "js/[name]/[name].js",
-    chunkFilename: "js/[name]/[name].bundle.js",
-    path: clientEnvironment.config.output.path,
-  },
-});
-
-module.exports = [clientConfig, serverConfig];
+module.exports = webpackConfig(developmentOnly);

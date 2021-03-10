@@ -31,6 +31,7 @@ install:
   - travis_retry npm i -g yarn
   - bundle
   - yarn
+  - bundle exec rake react_on_rails:locale
 
 before_script:
   - cp config/database.yml.travis config/database.yml
@@ -38,4 +39,4 @@ before_script:
 
 script:
   - bundle exec rspec
-  - yarn run test:client
+  - yarn run jest

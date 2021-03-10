@@ -26,6 +26,9 @@ settings:
   import/ignore:
     - \.coffee$
     - \.(scss|less|css)$
+  import/resolver:
+    webpack:
+      config: "config/webpack/development.js"
   react:
     createClass:
       createReactClass # Regex for Component Factory to use,

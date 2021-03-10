@@ -5,8 +5,10 @@
     "lint": "yarn run eslint client --ext \".js,.jsx,.ts\"",
     "test": "yarn run build:test && yarn run lint",
     "test:client": "cd client && yarn run test",
-    "build:test": "rm -rf public/webpack/test && RAILS_ENV=test NODE_ENV=test bin/webpack",
+    "dev_analyze": "rm -rf public/webpack/development && RAILS_ENV=development NODE_ENV=development BUNDLE_ANALYZE=true bin/webpack",
+    "prod_analyze": "rm -rf public/webpack/production && RAILS_ENV=production NODE_ENV=production BUNDLE_ANALYZE=true bin/webpack",
     "build:dev": "rm -rf public/webpack/development && RAILS_ENV=development NODE_ENV=development bin/webpack",
+    "build:test": "rm -rf public/webpack/test && RAILS_ENV=test NODE_ENV=test bin/webpack",
     "build:clean": "rm -rf public/webpack || true"
   },
   "dependencies": {
@@ -27,6 +29,7 @@
     "jest": "^26.6.3",
     "jquery": "^3.5.1",
     "jquery-ujs": "^1.2.2",
+    "lodash": "^4.17.20",
     "postcss-preset-env": "^6.7.0",
     "preload-webpack-plugin": "^2.3.0",
     "prop-types": "^15.7.2",
@@ -73,6 +76,7 @@
     "stylelint": "^13.10.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
   },
   "browser": {
