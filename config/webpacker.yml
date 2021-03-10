@@ -1,14 +1,13 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
-  public_output_path: webpack
-  public_root_path: public
   source_path: client/app
   source_entry_path: packs
-
+  public_root_path: public
+  public_output_path: webpack
   cache_path: tmp/cache/webpacker
   check_yarn_integrity: false
-  webpack_compile_output: false
+  webpack_compile_output: true
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
@@ -94,7 +93,7 @@ test:
 production:
   <<: *default
 
-  public_output_path: webpack/development
+  public_output_path: webpack/production
 
   # Production depends on precompilation of packs prior to booting for performance.
   compile: false
