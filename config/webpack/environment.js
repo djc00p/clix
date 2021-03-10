@@ -30,10 +30,32 @@ const urlLoader = {
     },
   },
 };
+
+// adding postCssLoader
+const postCssLoader = {
+  test: /\.css$/i,
+  use: {
+    loader: "postcss-loader",
+    options: {
+      postcssOptions: {
+        plugins: [
+          [
+            "postcss-preset-env",
+            {
+              // Options
+            },
+          ],
+        ],
+      },
+    },
+  },
+};
+
 environment.loaders.insert("url", urlLoader, { before: "file" });
 
 // changing order of babelLoader
 environment.loaders.insert("babel", babelLoader, { before: "css" });
+environment.loaders.insert("postcss", postCssLoader, { after: "css" });
 
 // add aliases to config
 environment.config.merge(aliasConfig);
